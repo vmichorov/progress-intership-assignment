@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: url("https://img.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg?size=626&ext=jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 60%;
+  margin: 50px;
+  margin-top: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 8px 8px 15px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  margin-bottom: 15px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 8px;
+  background-color: lightgrey;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: #007bff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #007bff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  width: 100%;
+}
+
+.option {
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.value {
+  margin-top: 40px;
+  font-size: 25px;
+}

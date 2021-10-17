@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Native Slider</title>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+        class="slider"
+        id="mySlider"
+        oninput="onValueChange()"
+        list="sliderLabels"
+      />
+      <datalist id="sliderLabels" class="sliderLabels">
+        <option
+          class="option"
+          value="0"
+          label="0%"
+          onclick="onOptionClick(0)"
+        ></option>
+        <option
+          class="option"
+          value="25"
+          label="25%"
+          onclick="onOptionClick(25)"
+        ></option>
+        <option
+          class="option"
+          value="50"
+          label="50%"
+          onclick="onOptionClick(50)"
+        ></option>
+        <option
+          class="option"
+          value="75"
+          label="75%"
+          onclick="onOptionClick(75)"
+        ></option>
+        <option
+          class="option"
+          value="100"
+          label="100%"
+          onclick="onOptionClick(100)"
+        ></option>
+      </datalist>
+      <p class="value" id="sliderValue">Value:</p>
+    </div>
+  </body>
+  <script>
+    function onValueChange() {
+      let sliderValue = document.querySelector("#mySlider").value;
+      let valueBox = document.querySelector("#sliderValue");
+      valueBox.textContent = `Value: ${sliderValue}`;
+    }
+    function onOptionClick(value) {
+      document.querySelector("#mySlider").value = value;
+      let valueBox = document.querySelector("#sliderValue");
+      valueBox.textContent = `Value: ${value}`;
+    }
+  </script>
+</html>
